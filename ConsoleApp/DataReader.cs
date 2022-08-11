@@ -9,7 +9,10 @@
     public static class DataReader
     {
         static List<ImportedObject> ImportedObjects;
-
+        /// <summary>
+        /// Import object from set file and print it's contents to the console.
+        /// </summary>
+        /// <param name="fileToImport"> Path to the file. </param>
         public static void ImportAndPrintData(string fileToImport)
         {
             ImportedObjects = new List<ImportedObject>();
@@ -74,7 +77,12 @@
             Console.ReadLine();
         }
 
-        //format the object's properties into a more readable form
+        /// <summary>
+        /// Format the object's properties into a more readable form
+        /// </summary>
+        /// <param name="data">The data to format</param>
+        /// <param name="toUpper">Should ToUpper() be used?</param>
+        /// <returns></returns>
         static string ClearUpData(string data, bool toUpper = false)
         {
             string clearedUp = data.Trim().Replace(" ", "").Replace(Environment.NewLine, "");
@@ -84,7 +92,10 @@
             return clearedUp;
         }
 
-        //print the contents of the imported list in a easily readable form
+        /// <summary>
+        /// Print the contents of the imported list in a easily readable form
+        /// </summary>
+        /// <param name="database">The ImportedObject to print from</param>
         static void PrintDataBase(ImportedObject database)
         {
             Console.WriteLine($"Database '{database.Name}' ({database.NumberOfChildren} tables)");

@@ -1,10 +1,12 @@
-1. Nie widzę potrzeby aby klasa DataReader w obecnej formie była instancjowana
-2. Literówka w nazwie pliku ("dataa", zamiast "data", lepiej przechowywać go jako zmienną)
-3. Klasy ImportedObjectBaseClass i jej pochodna ImportedObject mogą być przechowywane w osobnych plikach, dla lepszej czytelności.
-4. Brak warunku pomijającego puste linie, może wywołać wykrzaczenie programu.
-5. Iterator pętli importującej wartości nie może osiągnąć wartości równej długości tablicy, bo wykroczy poza indeks.
-6. Nie ma potrzeby dodawania pustego ImportedObject przy deklaracji listy, prowadzi do błędów.
-7. Brak warunku sprawdzającego czy tablica zwrócona po Split() posiada wystarczającą liczbę indeksów, może doprowadzić do błędu.
-8. Czyszczenie importowanych danych może zostać zaimplementowane w funkcji dla zmniejszenia repetycji kodu.
-9. Wartości do obiektów z listy ImportedObjects lepiej inicjować przy użyciu konstruktora, bardziej czytelne.
-10. Nie ma sensu deklarować ImportedObject jako IEnumerable, jeśli i tak jest inicjowana i używana jako List.
+1. Nie widzę potrzeby, aby klasa DataReader w obecnej formie była instancjowana.
+2. Literówka w nazwie pliku ("dataa", zamiast "data").
+3. Nazwę pliku lepiej przechowywać go jako zmienną.
+4. Klasy ImportedObjectBaseClass i jej pochodna ImportedObject mogą być przechowywane w osobnych plikach, dla lepszej czytelności.
+5. Brak warunku pomijającego puste linie, może wywołać wykrzaczenie programu.
+6. Iterator pętli importującej wartości nie może osiągać wartości równej długości tablicy, bo wykroczy poza indeks.
+7. Nie ma potrzeby dodawania pustego ImportedObject przy deklaracji listy, prowadzi do błędów.
+8. Brak warunku sprawdzającego czy tablica zwrócona po Split() posiada wystarczającą liczbę indeksów, może doprowadzić do błędu.
+9. Czyszczenie importowanych danych może zostać zaimplementowane jako funkcja, w celu zmniejszenia repetycji kodu.
+10. Wartości do obiektów z listy ImportedObjects lepiej inicjować przy użyciu konstruktora, prowadzi do lepszej czytelności.
+11. Nie ma sensu deklarować ImportedObject jako IEnumerable, jeśli i tak jest inicjowana i używana jako List.
+12. Argument printData jest nieużywany, nie widzę potrzeby jego istnienia, skoro nazwa funkcji domyślnie sugeruje wypisanie wartości.
